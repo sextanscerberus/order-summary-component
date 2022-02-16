@@ -1,6 +1,11 @@
 :root {
+	--very-pale-blue: hsl(225, 100%, 98%);
 	--pale-blue: hsl(225, 100%, 94%);
-	--white: hsl(0, 0%, 100%);
+	--bright-blue: hsl(245, 75%, 52%);
+	--gray: hsl(0, 0%, 40%);
+	--dark-blue: hsl(223, 47%, 23%);
+	--black: hsl(0, 0%, 0%);
+	--desaturated-blue: hsl(224, 23%, 55%);
 }
 
 body {
@@ -15,10 +20,11 @@ body {
 }
 
 #component {
-	background-color: var(--white);
-	width: 22%;
+	background-color: var(--very-pale-blue);
+	width: 23%;
 	text-align: center;
 	border-radius: 10px;
+	box-shadow: 0px 5px 15px 7px rgba(0, 0, 0, 0.1);
 }
 
 #component-hero {
@@ -28,20 +34,41 @@ body {
 }
 
 #order-content {
-	padding: 2em 2.5em;
-	color: hsla(0, 0, 0, 0.5);
+	padding: 2.5em 3em;
+	color: var(--gray);
 }
 
-#order-description h1 {
+h1{
 	font-size: 1.5em;
-	font-weight: bold;
+	font-weight: 900;
 	margin: 0;
+	color: var(--black);
 }
 
-#order-pricing {
+#pricing-section {
 	border: 1px red solid;
 	display: flex;
+	width: 100%;
 	align-items: center;
+}
+
+h2 {
+	font-size: 1.1em;
+	color: var(--black);
+	font-weight: 900;
+}
+
+#icon-music {
+	width: 100%;
+	height: auto;
+	max-width: 3em;
+	margin: 0 0.85em;
+}
+
+#change-button {
+	color: var(--bright-blue);
+	font-weight: 900;
+	text-decoration: none;
 }
 
 #payment-button {
@@ -49,16 +76,19 @@ body {
 	width: 100%;
 	text-align: center;
 	border: none;
-	color: var(--white);
-	background-color: hsl(245, 75%, 52%);
-	border-radius: 5px;
-	font-weight: bold;
-	box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.05);
+	color: var(--very-pale-blue);
+	background-color: var(--bright-blue);
+	border-radius: 5px;		
+	box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.25);
 	margin: 1.5em 0 1.75em;
+	transition: 0.5s ease;
 }
 
-#order-controls a {
+#cancel-button {
 	text-decoration: none;
+	color: var(--gray);
+	font-weight: 900;
+	transition: 0.3s ease;
 }
 
 #attribution {
@@ -67,4 +97,15 @@ body {
 	bottom: 0;
 	left: 0;
 	right: 0;
+}
+
+/* Hovers */
+@media (hover: hover) {
+	#payment-button:hover {
+		cursor: pointer;
+	}
+
+	#cancel-button:hover {
+		color: var(--black);
+	}
 }
