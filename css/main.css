@@ -16,7 +16,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 #component {
@@ -46,10 +46,10 @@ h1{
 }
 
 #pricing-section {
-	border: 1px red solid;
 	display: flex;
-	width: 100%;
+	text-align: left;
 	align-items: center;
+	justify-content: space-evenly;
 }
 
 h2 {
@@ -62,13 +62,18 @@ h2 {
 	width: 100%;
 	height: auto;
 	max-width: 3em;
-	margin: 0 0.85em;
+}
+
+#prices {
+	display: inline-block;
 }
 
 #change-button {
 	color: var(--bright-blue);
 	font-weight: 900;
 	text-decoration: none;
+	text-align: right;
+	flex-grow: 0.5;
 }
 
 #payment-button {
