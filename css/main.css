@@ -1,16 +1,17 @@
 :root {
-	--very-pale-blue: hsl(225, 100%, 98%);
+	--white: hsl(0, 0%, 100%);
 	--pale-blue: hsl(225, 100%, 94%);
 	--bright-blue: hsl(245, 75%, 52%);
 	--gray: hsl(0, 0%, 40%);
 	--dark-blue: hsl(223, 47%, 23%);
 	--black: hsl(0, 0%, 0%);
 	--desaturated-blue: hsl(224, 23%, 55%);
+	--very-pale-blue: hsl(244, 83%, 68%);
 }
 
 body {
 	font-family: 'Red Hat Display', sans-serif;
-	background: url("../images/pattern-background-desktop.svg") no-repeat fixed;
+	background: url("../images/pattern-background-desktop.svg") no-repeat;
 	background-color: var(--pale-blue);
 	display: flex;
 	justify-content: center;
@@ -20,8 +21,8 @@ body {
 }
 
 #component {
-	background-color: var(--very-pale-blue);
-	width: 23%;
+	background-color: var(--white);
+	width: 25%;
 	text-align: center;
 	border-radius: 10px;
 	box-shadow: 0px 5px 15px 7px rgba(0, 0, 0, 0.1);
@@ -56,6 +57,7 @@ h2 {
 	font-size: 1.1em;
 	color: var(--black);
 	font-weight: 900;
+	margin-bottom: 0;
 }
 
 #icon-music {
@@ -66,6 +68,10 @@ h2 {
 
 #prices {
 	display: inline-block;
+}
+
+#prices p {
+	margin-top: 0.5em;
 }
 
 #change-button {
@@ -81,7 +87,7 @@ h2 {
 	width: 100%;
 	text-align: center;
 	border: none;
-	color: var(--very-pale-blue);
+	color: var(--white);
 	background-color: var(--bright-blue);
 	border-radius: 5px;		
 	box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.25);
@@ -108,9 +114,45 @@ h2 {
 @media (hover: hover) {
 	#payment-button:hover {
 		cursor: pointer;
+		background-color: var(--very-pale-blue);
+	}
+
+	#change-button:hover {
+		color: var(--very-pale-blue);
 	}
 
 	#cancel-button:hover {
 		color: var(--black);
+	}
+}
+
+/* Media queries */
+@media (max-width: 1079px) {
+	#component {
+		width: 30%;
+	}
+}
+
+@media (max-width: 799px) {
+	#component {
+		width: 40%;
+	}
+}
+
+@media (max-width: 614px) {
+	#component {
+		width: 55%;
+	}
+}
+
+@media (max-width: 375px) {
+	body {
+		font-size: 12px;
+		background: url(../images/pattern-background-mobile.svg) no-repeat;	
+		background-color: var(--pale-blue);
+	}
+
+	#component {
+		width: 80%;
 	}
 }
