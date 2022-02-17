@@ -129,19 +129,20 @@ h2 {
 /* Media queries */
 @media (max-width: 1079px) {
 	#component {
-		width: 30%;
+		width: 35%;
 	}
 }
 
 @media (max-width: 799px) {
 	#component {
-		width: 40%;
+		width: 45%;
 	}
 }
 
 @media (max-width: 614px) {
 	#component {
-		width: 65%;
+		font-size: 12px;
+		width: 70%;
 	}
 }
 
